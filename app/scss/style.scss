@@ -1,0 +1,53 @@
+/*Переменные*/
+
+$fontSize14: 0.875rem;
+$fontSize16: 1rem;
+
+
+/*Миксины*/
+
+@mixin fontMons($fontSize, $color) {
+    font-size: $fontSize;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: $color;
+}
+
+@mixin fontRob($fontSize, $color) {
+    font-size: $fontSize;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    color: $color;
+}
+
+/*Общие стили*/
+
+body, h1, h2, h3, h4, h5, h6, pul,li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*Header*/
+
+.header {
+    background-image: url(../images/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    @include fontMons(1.5rem, #ffffff );
+}
+
+  
