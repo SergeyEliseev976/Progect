@@ -22,7 +22,15 @@ $fontSize16: 1rem;
 
 /*Общие стили*/
 
-body, h1, h2, h3, h4, h5, h6, pul,li {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
     margin: 0;
     padding: 0;
 }
@@ -43,11 +51,95 @@ body {
 .header {
     background-image: url(../images/header.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    //background-position: center center;
+    background-size: 100% 795px;
+    //background-size: 100% 770px;
 }
 
-.logo {
-    @include fontMons(1.5rem, #ffffff );
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+
+    .logo {
+        @include fontRob(1.5rem, #ffffff);
+    }    
+
+
+    .ulNav {
+        list-style-type: none;
+        display: flex;
+        padding-left: 0;
+
+        li {
+            padding-left: 35px;
+
+            a {
+                text-decoration: none;
+                @include fontMons($fontSize14, #ffffff);
+            }
+
+            a::after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: #ffffff;
+                top: 100%;
+                opacity: 0;
+                margin-top: 5px;
+            }
+
+            a:hover {
+                color: #ffffff;
+            }
+
+            a:hover::after {
+                opacity: 1;
+            }
+        }
+    }
 }
+
+.headerCentr {
+    box-sizing: content-box;
+    width: 51%;
+    margin: 0 auto;
+    padding-bottom: 260px;
+    padding-top: 260px;
+    text-align: center;
+    
+
+    h2 {
+        @include fontRob(3rem, #ffffff);
+        text-transform: uppercase;
+        line-height: 0.8;
+    }
+
+    h4 {
+        @include fontMons(1.5rem, #ffffff );
+        margin-top: 33px;
+        margin-bottom: 50px;
+    }
+
+    .get {
+        display: block;
+        margin: 0 auto;
+        text-decoration: none;
+        @include fontMons(1rem, #ffffff );
+        text-transform: uppercase;
+        border: 2px solid #ffffff;
+        max-width: 180px;
+        padding-top: 18px;
+        padding-bottom: 18px;      
+    }
+}
+
+
+
+
+
 
   
