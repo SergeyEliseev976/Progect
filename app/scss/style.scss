@@ -137,6 +137,87 @@ body {
     }
 }
 
+/*Main*/
+
+.main {
+    background-image: url(../images/Body.png);
+    background-repeat: no-repeat;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.mainCenter {
+    box-sizing: content-box;
+    width: 43%;
+    margin: 100px auto 70px auto;
+    text-align: center;
+
+    h3 {
+        @include fontMons(1.25rem, #555555);
+        text-transform: uppercase;
+    }
+
+    div {
+        display: inline-block;
+        width: 17%;
+        height: 3px;
+        background-color: #555555;
+        margin-top: 30px;
+        margin-bottom: 28px;
+    }
+
+    h4 {
+        @include fontRob(1rem, #555555);
+    }
+
+    
+}
+
+.mainCards {
+
+    margin-bottom: 200px;
+
+    .cards {
+        
+        display: flex;
+        justify-content: space-between;
+
+        .card {
+
+            box-sizing: content-box;
+            width: 31%;
+            text-align: center;
+            h3, p {
+                @include fontMons(0.875rem, #757575);
+            }
+
+            h3 {
+                padding-top: 30px;
+                padding-bottom: 25px;
+                text-transform: uppercase;
+            }
+
+        }
+    }
+}
+
+.textes {
+    display: flex;
+    justify-content: space-between;
+    .text {
+        box-sizing: content-box;
+        width: 48%;
+        text-align: left;
+        p {
+            @include fontMons(0.875rem, #757575); 
+        }
+    }
+}
 
 
 
