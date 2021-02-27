@@ -219,6 +219,32 @@ body {
     }
 }
 
+.mainCardsPhoto {
+        margin-top: 75px;
+        margin-bottom: 200px;          
+    .cardsPhoto {
+        display: flex;
+        justify-content: space-between;
+
+        .cardPhoto {
+            text-align: center;
+            box-sizing: content-box;
+            width: 24%;
+
+            h3 {
+                @include fontMons(0.875rem, #555555);
+                text-transform: uppercase;
+                padding-top: 20px;
+                padding-bottom: 15px;  
+            }
+
+            h4 {
+                @include fontRob(0.8125rem, #555555);
+            }
+        }
+    }
+}
+
 
 
 
